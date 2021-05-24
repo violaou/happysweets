@@ -1,11 +1,11 @@
 import React from "react";
 import Context from "./Context";
 
-const withContext = (WrappedComponent: JSX.IntrinsicAttributes) => {
-  const WithHOC = (props: JSX.IntrinsicAttributes) => {
+const withContext = WrappedComponent => {
+  const WithHOC = props => {
     return (
       <Context.Consumer>
-        {/* {context => <WrappedComponent {...props} context={context} />} */}
+        {context => <WrappedComponent {...props} context={context} />}
       </Context.Consumer>
     );
   };
